@@ -3,9 +3,9 @@ if ('serviceWorker' in navigator) {
 	.then(initialiseState);
 }
 
-if(!('PushManager' in window)){
-	return;
-}
+// if(!('PushManager' in window)){
+// 	return;
+// }
 
 navigator.serviceWorker.ready
 .then(function(serviceWorkerRegistration){
