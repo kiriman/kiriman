@@ -9,13 +9,28 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('push', function(event) {
   console.log('Push message received', event);
   // TODO
-  var title = 'Push message';
-  event.waitUntil(
-    self.registration.showNotification(title, {
-      body: 'The Message',
-      icon: 'images/icon.png',
-      tag: 'my-tag'
-    }));
+  // var title = 'Push message';
+  // event.waitUntil(
+  //   self.registration.showNotification(title, {
+  //     body: 'The Message',
+  //     icon: 'images/icon.png',
+  //     tag: 'my-tag'
+  //   }));
+  debugger;
+  console.log('Received a push message', event);
+
+  var title = 'Notification';  
+  var body = 'There is newly updated content available on the site. Click to see more.';  
+  var icon = 'https://raw.githubusercontent.com/deanhume/typography/gh-pages/icons/typography.png';  
+  var tag = 'simple-push-demo-notification-tag';
+  
+  event.waitUntil(  
+    self.registration.showNotification(title, {  
+       body: body,  
+       icon: icon,  
+       tag: tag  
+     })  
+   );  
 
 });
 self.addEventListener('notificationclick', function(event) {
