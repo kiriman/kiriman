@@ -14,6 +14,7 @@
       }
     }]);
     OneSignal.push(["setDefaultTitle", "Custom Default Title"]);
+    OneSignal.push(["setDefaultNotificationUrl", "https://domain.com/index2"]);
     OneSignal.push(["addListenerForNotificationOpened", function(data) {
 	  console.log("Received NotificationOpened:");
 	  console.log(data);
