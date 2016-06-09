@@ -11,13 +11,12 @@
       autoRegister: false,
       notifyButton: {
         enable: true /* Set to false to hide */
-      },
-      welcomeNotification: {
-        "title": "My Custom Title",
-        "message": "Thanks for subscribing!",
-        "url": "https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm"
       }
     }]);
+    OneSignal.push(["addListenerForNotificationOpened", function(data) {
+	  console.log("Received NotificationOpened:");
+	  console.log(data);
+	}]);
   </script>
 </head>
 <body>
