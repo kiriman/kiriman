@@ -15,6 +15,9 @@
     }]);
     OneSignal.push(["setDefaultTitle", "Custom Default Title"]);
     OneSignal.push(["setDefaultNotificationUrl", "https://domain.com/index2"]);
+    OneSignal.push(["sendTags", {key2: "level", key3: "11"}, function() {
+  		// Callback called when tags have finished sending  
+	}]);
     OneSignal.push(["addListenerForNotificationOpened", function(data) {
 	  console.log("Received NotificationOpened:");
 	  console.log(data);

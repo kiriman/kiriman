@@ -12,7 +12,9 @@
       'contents' => $content,
       'firefox_icon' => 'https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm',
       'chrome_icon' => 'https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm',
-      'url' => 'https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm'
+      'url' => 'https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm',
+      // 'app_ids' => ["2e3c7a72-31e6-4807-85b6-3e9eeb145fa7"]
+      'tags' => [{"key": "level", "relation": ">", "value": "10"}
     );
     
     $fields = json_encode($fields);
