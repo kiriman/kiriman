@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Push Notification codelab</title>
-  <link rel="manifest" href="manifest.json?mm">
+  <link rel="manifest" href="manifest.json">
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
   <script>
     var OneSignal = OneSignal || [];
@@ -13,6 +13,7 @@
         enable: true /* Set to false to hide */
       }
     }]);
+    OneSignal.push(["setDefaultTitle", "Custom Default Title"]);
     OneSignal.push(["addListenerForNotificationOpened", function(data) {
 	  console.log("Received NotificationOpened:");
 	  console.log(data);
