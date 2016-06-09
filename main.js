@@ -1,41 +1,13 @@
-if ('serviceWorker' in navigator) { 
-	navigator.serviceWorker.register('/sw.js')
-	.then(initialiseState);
+if ('serviceWorker' in navigator) {
+    console.log('Service Worker is supported');
+    navigator.serviceWorker.register('sw.js').then(function(reg) {
+        console.log(':^)', reg);
+        reg.pushManager.subscribe({
+            userVisibleOnly: true
+        }).then(function(sub) {
+            console.log('endpoint:', sub.endpoint);
+        });
+    }).catch(function(error) {
+        console.log(':^(', error);
+    });
 }
-
-// if(!('PushManager' in window)){
-// 	return;
-// }
-
-navigator.serviceWorker.ready
-.then(function(serviceWorkerRegistration){
-	serviceWorkerRegistration.pushManager
-	.getSubscription()
-		.then(function(pushSubscription){
-			if(!pushSubscription){
-				return;
-			}
-			///
-		})
-		.catch(function(err){
-			console.error(err);
-		});
-});
-
-serviceWorkerRegistration.pushManager
-.subscribe({userVisibleOnly: true})
-.then(function(subscription){
-//the subscruption was successful
-	console.log(subscription.endpoint);
-})
-.catch(function(error){
-	console.error('Error subscribing', error);
-});
-
-pushSubscription.unsuscribe()
-	.then(function(successful){
-		console.log('Successful?', successful);
-	})
-	.catch(function(err){
-		console.error(err);
-	});
