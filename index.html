@@ -3,10 +3,19 @@
 <head>
   <title>Push Notification codelab</title>
   <link rel="manifest" href="manifest.json">
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  <script>
+    var OneSignal = OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "YOUR_APP_ID",
+      autoRegister: false,
+      notifyButton: {
+        enable: true /* Set to false to hide */
+      }
+    }]);
+  </script>
 </head>
 <body>
-  <h1>Push Notification codelab</h1>
-  <p>This page must be accessed using HTTPS or via localhost.</p>
-  <script src="main.js"></script>
+  <h1>OneSignal</h1>
 </body>
 </html>
