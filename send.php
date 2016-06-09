@@ -1,4 +1,5 @@
 <?PHP
+//https://documentation.onesignal.com/v2.0/docs/notifications-create-notification
   function sendMessage(){
     $content = array(
       "en" => 'English Message'
@@ -8,7 +9,10 @@
       'app_id' => "6ca9be2c-b754-4332-be54-0b5be69d8a5f",
       'included_segments' => array('All'),
       'data' => array("foo" => "bar"),
-      'contents' => $content
+      'contents' => $content,
+      'firefox_icon' => 'https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm',
+      'chrome_icon' => 'https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm',
+      'url' => 'https://www.gravatar.com/avatar/e590a6c22fa1212ee39eb815e17ac533?d=mm'
     );
     
     $fields = json_encode($fields);
