@@ -1,6 +1,6 @@
 {
-  "name": "Push Notifications codelab",
-  "short_name": "push notify",
+  "name": "Push Notifications OneSignal",
+  "short_name": "OneSignal Notify",
   "start_url": "/",
   "display": "standalone",
   "gcm_sender_id": "238333543667"
